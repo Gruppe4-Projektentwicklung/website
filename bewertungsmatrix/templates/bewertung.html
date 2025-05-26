@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bewertungsmatrix</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Bewertungsmatrix</h1>
+    <p>Wähle für jede Kennzahl eine Gewichtung (0 = ignorieren, 5 = sehr wichtig):</p>
+  </header>
+
+  <main>
+    <form id="bewertungs-form">
+      <div id="metriken-container"></div>
+      <button type="submit">Bewertung starten</button>
+    </form>
+
+    <div id="ergebnisse">
+      <h2>Ergebnisse</h2>
+      <ul id="ergebnis-liste"></ul>
+    </div>
+  </main>
+
+  <script>
+    const metriken = {{ metriken|tojson }};
+  </script>
+  <script src="/static/main.js"></script>
+</body>
+</html>
